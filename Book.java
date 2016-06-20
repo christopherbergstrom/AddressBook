@@ -16,7 +16,7 @@ public class Book
 	public void read()
 	{
 		int i = 1;
-		System.out.println("First name, Last name, Company, Phone, Email, Address, Birthday\n");
+		System.out.println("Number, First name, Last name, Company, Phone, Email, Address, Birthday\n");
 		for(int key : book.keySet())
 		{
 			System.out.println("#"+key+" "+book.get(key));
