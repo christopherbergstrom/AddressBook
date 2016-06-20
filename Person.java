@@ -8,20 +8,20 @@ public class Person
 		this.firstname = "";
 		this.lastname = "";
 		this.company = "";
+		this.phone = "";
 		this.email = "";
 		this.address = "";
 		this.birthday = "";
-		this.phone = "";
 	}
 	public Person(String firstname, String lastname, String company, String email, String address, String birthday, String phone)
 	{
 		this.firstname = firstname;
 		this.lastname = lastname;
 		this.company = company;
+		this.phone = phone;
 		this.email = email;
 		this.address = address;
 		this.birthday = birthday;
-		this.phone = phone;
 	}
 	public String getFirstname()
 	{
@@ -82,7 +82,7 @@ public class Person
 	@Override
 	public String toString()
 	{
-		return "Person [firstname=" + firstname + ", lastname=" + lastname + ", company=" + company + ", email=" + email
-				+ ", address=" + address + ", birthday=" + birthday + ", phone=" + phone + "]";
+		return firstname + ", " + lastname + ", " + company + ", " + email
+				+ ", " + address + ", " + birthday + ", " + phone;
 	}
 }
