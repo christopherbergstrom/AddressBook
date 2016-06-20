@@ -20,23 +20,7 @@ public class Menu
 			}
 			else if (choice.equals("2"))
 			{
-				System.out.println("Enter new contact's info:");
-				System.out.print("First name: ");
-				String firstname = input.next();
-				System.out.print("Last name: ");
-				String lastname = input.next();
-				System.out.print("Company: ");
-				String company = input.next();
-				System.out.print("Phone: ");
-				String phone = input.next();
-				System.out.print("Email: ");
-				String email = input.next();
-				System.out.print("Address: ");
-				String address = input.next();
-				System.out.print("Birthday: ");
-				String birthday = input.next();
-				Person p = new Person(firstname, lastname, company, phone, email, address, birthday);
-				book.add(p);
+				book.add();
 			}
 			else if (choice.equals("3"))
 			{

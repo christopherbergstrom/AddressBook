@@ -1,9 +1,11 @@
 package addressBook;
 
 import java.util.HashMap;
+import java.util.Scanner;
 
 public class Book
 {
+	Scanner input = new Scanner(System.in);
 	HashMap<Integer, Person> book = new HashMap<Integer, Person>();
 	public Book()
 	{
@@ -22,9 +24,25 @@ public class Book
 		}
 		System.out.println();
 	}
-	public void add(Person p)
+	public void add()
 	{
-		
+		System.out.println("Enter new contact's info:");
+		System.out.print("First name: ");
+		String firstname = input.next();
+		System.out.print("Last name: ");
+		String lastname = input.next();
+		System.out.print("Company: ");
+		String company = input.next();
+		System.out.print("Phone: ");
+		String phone = input.next();
+		System.out.print("Email: ");
+		String email = input.next();
+		System.out.print("Address: ");
+		String address = input.next();
+		System.out.print("Birthday: ");
+		String birthday = input.next();
+		Person p = new Person(firstname, lastname, company, phone, email, address, birthday);
+		book.put(book.size()+1, p);
 	}
 	public void update()
 	{
