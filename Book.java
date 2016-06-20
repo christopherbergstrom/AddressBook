@@ -19,7 +19,7 @@ public class Book
 		System.out.println("First name, Last name, Company, Phone, Email, Address, Birthday\n");
 		for(int s : book.keySet())
 		{
-			System.out.println(i+" "+book.get(s));
+			System.out.println("#"+i+". "+book.get(s));
 			i ++;
 		}
 		System.out.println();
@@ -43,6 +43,7 @@ public class Book
 		String birthday = input.next();
 		Person p = new Person(firstname, lastname, company, phone, email, address, birthday);
 		book.put(book.size()+1, p);
+		System.out.println();
 	}
 	public void update()
 	{
@@ -50,6 +51,23 @@ public class Book
 	}
 	public void delete()
 	{
-		
+		Integer num = null;
+		while (num == null)
+		{
+			
+			System.out.println("Enter number of contact to delete:");
+			System.out.print("Number: ");
+			String number = input.next();
+			try
+			{				
+				num = Integer.valueOf(number);
+				book.remove(num);
+				System.out.println("Contact number "+num+" removed\n");
+			}
+			catch (Exception e)
+			{
+				System.out.println("You didn't enter a number\n");				
+			}
+		}
 	}
 }
